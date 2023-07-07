@@ -7,8 +7,10 @@ import mpld3
 
 def prepare_shots_data(shots):
     shots = shots[['team', 'player', 'minute', 'second', 'location', 'shot_statsbomb_xg', 'shot_outcome']]
-    shots['x'] = shots.location.apply(lambda x: x[0])
-    shots['y'] = shots.location.apply(lambda x: x[1])
+    # shots['x'] = shots.location.apply(lambda x: x[0])
+    # shots['y'] = shots.location.apply(lambda x: x[1])
+    shots['x'] = shots.location.str[0].values
+    shots['y'] = shots.location.str[1].values
     shots = shots.drop('location', axis=1)
     # Divide the dataset based on the outcome
     goals = shots[shots.shot_outcome == 'Goal']
