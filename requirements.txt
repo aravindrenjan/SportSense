@@ -7,5 +7,5 @@ mplsoccer
 scipy
 cmasher
 seaborn
-sklearn
+scikit-learn
 mpld3
