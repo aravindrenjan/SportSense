@@ -11,3 +11,4 @@ scikit-learn
 mpld3
 mplcursors
 plotly
+base64
