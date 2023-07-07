@@ -19,7 +19,7 @@ def display_player_pass_network(match_id, player_name):
     fig, ax = pitch.draw(figsize=(10, 6.5))
     #plt.gca().invert_yaxis()
 
-    kde = sns.kdeplot(x=Loc['x'], y=Loc['y'], shade=True, thresh=0.05, alpha=0.5, levels=12, cmap='gnuplot')
+    kde = sns.kdeplot(x=Loc['x'], y=Loc['y'], fill=True, thresh=0.05, alpha=0.5, levels=12, cmap='gnuplot')
 
     for i in range(len(events_1)):
         if events_1.pass_outcome[i] == 'Incomplete' or events_1.pass_outcome[i] == 'Unknown':
