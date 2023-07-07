@@ -1,0 +1,11 @@
+streamlit
+pandas
+statsbombpy
+matplotlib
+numpy
+mplsoccer
+scipy
+cmasher
+seaborn
+sklearn
+mpld3
