@@ -11,4 +11,4 @@ scikit-learn
 mpld3
 mplcursors
 plotly
-base64
+pybase64==1.2.3
