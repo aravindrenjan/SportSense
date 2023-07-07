@@ -5,8 +5,10 @@ import matplotlib.pyplot as plt
 import numpy as np
 from cssdetails import grow_element
 import mplcursors
+import matplotlib as mpl
 
 def render_radar_chart(match_choice, home_player_choice_id, home_player_choice, away_player_choice_id, away_player_choice):
+    mpl.rcParams['font.family'] = 'sans-serif'
     # Set the match ID and player IDs
     match_id = match_choice
 
