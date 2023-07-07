@@ -9,3 +9,4 @@ cmasher
 seaborn
 scikit-learn
 mpld3
+mplcursor
