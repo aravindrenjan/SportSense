@@ -184,13 +184,15 @@ def main():
             center = cluster_centers[cluster_idx]
             st.markdown(f"<h5 style='display: flex; text-align: center; align-items: center; justify-content: center;'>{home_player_choice}'s Cluster</h5>", unsafe_allow_html=True)
             for feature_idx, feature_name in enumerate(selected_features):
-                st.markdown(f"<p style='display: flex; text-align: center; align-items: center; justify-content: center;'>{feature_name}: {center[feature_idx]}</p>", unsafe_allow_html=True)
+                rounded_value = round(center[feature_idx], 2)
+                st.markdown(f"<p style='display: flex; text-align: center; align-items: center; justify-content: center;'>{feature_name}: {rounded_value}</p>", unsafe_allow_html=True)
         with col2:
             cluster_idx = 1
             center = cluster_centers[cluster_idx]
             st.markdown(f"<h5 style='display: flex; text-align: center; align-items: center; justify-content: center;'>{away_player_choice}'s Cluster</h5>", unsafe_allow_html=True)
             for feature_idx, feature_name in enumerate(selected_features):
-                st.markdown(f"<p style='display: flex; text-align: center; align-items: center; justify-content: center;'>{feature_name}: {center[feature_idx]}</p>", unsafe_allow_html=True)
+                rounded_value = round(center[feature_idx], 2)
+                st.markdown(f"<p style='display: flex; text-align: center; align-items: center; justify-content: center;'>{feature_name}: {rounded_value}</p>", unsafe_allow_html=True)
 
     my_expander = st.expander("Players Pass K-Means Clustering", expanded=False)
     with my_expander:
