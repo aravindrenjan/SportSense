@@ -5,8 +5,10 @@ import seaborn as sns
 import pandas as pd
 import streamlit as st
 from matplotlib.patches import Patch
+import matplotlib as mpl
 
 def display_player_pass_network(match_id, player_name):
+    mpl.rcParams['font.family'] = 'sans-serif'
     events = sb.events(match_id)
     events_1 = events[['team', 'type', 'minute', 'location', 'pass_end_location', 'pass_outcome', 'player']]
     events_1 = events_1[events_1['player'] == player_name].reset_index()
