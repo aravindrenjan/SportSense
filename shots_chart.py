@@ -4,8 +4,10 @@ from mplsoccer import Pitch
 from statsbombpy import sb
 import matplotlib.pyplot as plt
 import mpld3
+import matplotlib as mpl
 
 def prepare_shots_data(shots):
+    mpl.rcParams['font.family'] = 'sans-serif'
     shots = shots[['team', 'player', 'minute', 'second', 'location', 'shot_statsbomb_xg', 'shot_outcome']]
     # shots['x'] = shots.location.apply(lambda x: x[0])
     # shots['y'] = shots.location.apply(lambda x: x[1])
