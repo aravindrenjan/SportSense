@@ -1,6 +1,6 @@
 streamlit
 pandas
-statsbombpy
+statsbombpy==1.10.1
 matplotlib
 numpy
 mplsoccer
